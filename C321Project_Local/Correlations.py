@@ -30,7 +30,7 @@ for i in range(0, len(corr)):
         corrvar.append(green[i+1])
 
 # What variables do you you want?
-varnames = corrvar #add as many as you need, the for loop plots it
+varnames = [] #add as many as you need, the for loop plots it
 for i in varnames:
     y = list(AvgData.loc[:, i])
     y = y[instart:inend+1]
