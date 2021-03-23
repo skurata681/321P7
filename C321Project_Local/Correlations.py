@@ -10,8 +10,8 @@ green = list(AvgData)
 
 dates = list(AvgData.loc[:, 'dates'])
 dateswanted = []
-startdate = 200323
-enddate = 200423
+startdate = 200301
+enddate = 200430
 instart = dates.index(startdate) #index's  to cut variable data
 inend = dates.index(enddate)
 for i in dates:
@@ -30,7 +30,7 @@ for i in range(0, len(corr)):
         corrvar.append(green[i+1])
 
 # What variables do you you want?
-varnames = [] #add as many as you need, the for loop plots it
+varnames = ['surface_pres', 'surface_temp'] #add as many as you need, the for loop plots it
 for i in varnames:
     y = list(AvgData.loc[:, i])
     y = y[instart:inend+1]
